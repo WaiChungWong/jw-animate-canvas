@@ -9,7 +9,6 @@ class ExampleAnimateCanvas extends Component {
   constructor(props) {
     super(props);
 
-    this._animate = this._animate.bind(this);
     this.x = 0;
     this.secondInterval = 0;
 
@@ -23,15 +22,36 @@ class ExampleAnimateCanvas extends Component {
 
   componentDidMount() {
     const { animator } = this.canvas;
-    const { FPS } = animator;
+    const { FPS, actualFPS, pauseOnHidden, resumeOnShown } = animator;
 
-    this.setState({ FPS });
+    this.setState({
+      FPS,
+      actualFPS,
+      pauseOnHidden,
+      resumeOnShown
+    });
   }
 
-  _animate(context, width, height, timeDiff) {
+  draw() {
+    const { canvas } = this;
+    const context = canvas.getContext();
+    const element = canvas.getCanvasElement();
+    const { width, height } = element;
+
     let radius = 40;
     let centerY = height / 2 - radius;
 
+    context.clearRect(0, 0, width, height);
+    context.beginPath();
+    context.arc(this.x, centerY, radius, 0, 2 * Math.PI, false);
+    context.fillStyle = "green";
+    context.fill();
+    context.lineWidth = 5;
+    context.strokeStyle = "#003300";
+    context.stroke();
+  }
+
+  animate(context, width, height, timeDiff) {
     this.x = (this.x + timeDiff * 200) % width;
     this.secondInterval += timeDiff;
 
@@ -40,13 +60,7 @@ class ExampleAnimateCanvas extends Component {
       this.secondInterval = 0;
     }
 
-    context.clearRect(0, 0, width, height);
-    context.beginPath();
-    context.arc(this.x, centerY, radius, 0, 2 * Math.PI, false);
-    context.fillStyle = "green";
-    context.fill();
-    context.strokeStyle = "#003300";
-    context.stroke();
+    this.draw();
   }
 
   setFPS(FPS) {
@@ -92,7 +106,10 @@ class ExampleAnimateCanvas extends Component {
         <AnimateCanvas
           className="animation"
           ref={c => (this.canvas = c)}
-          animate={this._animate}
+          animate={(context, width, height, timeDiff) =>
+            this.animate(context, width, height, timeDiff)
+          }
+          onResize={() => this.draw()}
         />
         <div className="settings">
           <div className="field">
