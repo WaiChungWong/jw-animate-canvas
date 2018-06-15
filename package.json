@@ -1,8 +1,9 @@
 {
   "name": "jw-animate-canvas",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A react component for canvas, integrated with animation feature.",
   "author": "john wong <johnwongwwc@gmail.com>",
+  "homepage": "https://waichungwong.github.io/jw-animate-canvas/build",
   "keywords": [
     "canvas",
     "react",
@@ -38,7 +39,8 @@
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "babel src/module -d lib --copy-files"
+    "build": "babel src/module -d lib --copy-files",
+    "build-demo": "npm run build-css && react-scripts build"
   },
   "babel": {
     "presets": [
