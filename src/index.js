@@ -39,11 +39,10 @@ class ExampleAnimateCanvas extends Component {
     const { width, height } = element;
 
     let radius = 40;
-    let centerY = height / 2 - radius;
 
     context.clearRect(0, 0, width, height);
     context.beginPath();
-    context.arc(this.x, centerY, radius, 0, 2 * Math.PI, false);
+    context.arc(this.x, radius + 10, radius, 0, 2 * Math.PI, false);
     context.fillStyle = "green";
     context.fill();
     context.lineWidth = 5;
@@ -178,10 +177,18 @@ class Demo extends Component {
         <ExampleAnimateCanvas ref={a1 => (this.a1 = a1)} id="animator1" />
         <ExampleAnimateCanvas ref={a2 => (this.a2 = a2)} id="animator2" />
         <div id="controller">
-          <button onClick={() => this.startHandler()}>start</button>
-          <button onClick={() => this.pauseHandler()}>pause</button>
-          <button onClick={() => this.resumeHandler()}>resume</button>
-          <button onClick={() => this.stopHandler()}>stop</button>
+          <button id="start" onClick={() => this.startHandler()}>
+            start
+          </button>
+          <button id="pause" onClick={() => this.pauseHandler()}>
+            pause
+          </button>
+          <button id="resume" onClick={() => this.resumeHandler()}>
+            resume
+          </button>
+          <button id="stop" onClick={() => this.stopHandler()}>
+            stop
+          </button>
         </div>
       </div>
     );
