@@ -17,6 +17,8 @@ It is extended from [canvas](https://nodei.co/npm/jw-canvas), integrated with an
 [download-image]: https://img.shields.io/npm/dm/jw-animate-canvas.svg
 [download-url]: https://npmjs.org/package/jw-animate-canvas
 
+[Demo](http://waichungwong.github.io/jw-animate-canvas/build)
+
 ## Install
 
 [![NPM](https://nodei.co/npm/jw-animate-canvas.png)](https://nodei.co/npm/jw-animate-canvas)
