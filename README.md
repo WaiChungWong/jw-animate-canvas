@@ -38,7 +38,7 @@ It is extended from [canvas](https://nodei.co/npm/jw-canvas), integrated with an
 ```javascript
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import CanvasAnimator from "jw-animate-canvas";
+import AnimateCanvas from "jw-animate-canvas";
 
 class Example extends Component {
   constructor(props) {
@@ -71,7 +71,7 @@ class Example extends Component {
 
   render() {
     return (
-      <CanvasAnimator
+      <AnimateCanvas
         ref={myCanvas => (this.myCanvas = myCanvas)}
         onResize={this.resizeHandler}
         animate={this.animate}
