@@ -151,9 +151,16 @@ class ExampleAnimateCanvas extends Component {
 }
 
 class Demo extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { status: "STOPPED" };
+  }
+
   startHandler() {
     this.a1.start();
     this.a2.start();
+    this.setState({ status: "PLAYING" });
   }
 
   pauseHandler() {
@@ -172,12 +179,18 @@ class Demo extends Component {
   }
 
   render() {
+    const { status } = this.state;
+
     return (
       <div>
         <ExampleAnimateCanvas ref={a1 => (this.a1 = a1)} id="animator1" />
         <ExampleAnimateCanvas ref={a2 => (this.a2 = a2)} id="animator2" />
         <div id="controller">
-          <button id="start" onClick={() => this.startHandler()}>
+          <button
+            id="start"
+            onClick={() => this.startHandler()}
+            disabled={status !== "STOPPED"}
+          >
             start
           </button>
           <button id="pause" onClick={() => this.pauseHandler()}>
@@ -186,7 +199,11 @@ class Demo extends Component {
           <button id="resume" onClick={() => this.resumeHandler()}>
             resume
           </button>
-          <button id="stop" onClick={() => this.stopHandler()}>
+          <button
+            id="stop"
+            onClick={() => this.stopHandler()}
+            disabled={status === "STOPPED"}
+          >
             stop
           </button>
         </div>

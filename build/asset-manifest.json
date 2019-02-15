@@ -1,6 +1,13 @@
 {
-  "main.css": "static/css/main.8626b400.css",
-  "main.css.map": "static/css/main.8626b400.css.map",
-  "main.js": "static/js/main.46732306.js",
-  "main.js.map": "static/js/main.46732306.js.map"
+  "main.css": "/jw-animate-canvas/build/static/css/main.08fb92e9.chunk.css",
+  "main.js": "/jw-animate-canvas/build/static/js/main.aca5916c.chunk.js",
+  "main.js.map": "/jw-animate-canvas/build/static/js/main.aca5916c.chunk.js.map",
+  "runtime~main.js": "/jw-animate-canvas/build/static/js/runtime~main.b225fbe1.js",
+  "runtime~main.js.map": "/jw-animate-canvas/build/static/js/runtime~main.b225fbe1.js.map",
+  "static/js/2.ae6f7b9f.chunk.js": "/jw-animate-canvas/build/static/js/2.ae6f7b9f.chunk.js",
+  "static/js/2.ae6f7b9f.chunk.js.map": "/jw-animate-canvas/build/static/js/2.ae6f7b9f.chunk.js.map",
+  "index.html": "/jw-animate-canvas/build/index.html",
+  "precache-manifest.c8bc4b36c8cddf2d863031079b400f1a.js": "/jw-animate-canvas/build/precache-manifest.c8bc4b36c8cddf2d863031079b400f1a.js",
+  "service-worker.js": "/jw-animate-canvas/build/service-worker.js",
+  "static/css/main.08fb92e9.chunk.css.map": "/jw-animate-canvas/build/static/css/main.08fb92e9.chunk.css.map"
 }

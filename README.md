@@ -1,7 +1,7 @@
 # jw-animate-canvas
 
-A react component for canvas with shortcut methods for animations.
-It is extended from [canvas](https://nodei.co/npm/jw-canvas), integrated with an [animator](https://nodei.co/npm/jw-animator).
+A react component for canvas integrated with animation feature.
+It is a combination of [canvas](https://nodei.co/npm/jw-canvas) and [animator](https://nodei.co/npm/jw-animator).
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
