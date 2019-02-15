@@ -176,6 +176,7 @@ class Demo extends Component {
   stopHandler() {
     this.a1.stop();
     this.a2.stop();
+    this.setState({ status: "STOPPED" });
   }
 
   render() {
