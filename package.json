@@ -1,6 +1,6 @@
 {
   "name": "jw-animate-canvas",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A react component for canvas integrated with animation feature.",
   "author": "john wong <johnwongwwc@gmail.com>",
   "homepage": "https://waichungwong.github.io/jw-animate-canvas/build",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "jw-animator": "^0.1.5",
-    "jw-canvas": "^0.1.5",
+    "jw-canvas": "^0.1.8",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
