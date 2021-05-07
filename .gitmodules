@@ -1,0 +1,3 @@
+[submodule "src/module/jw-animator"]
+	path = src/module/jw-animator
+	url = https://github.com/WaiChungWong/jw-animator
